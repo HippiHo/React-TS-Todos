@@ -1,0 +1,32 @@
+.newTodo {
+  display: flex;
+  flex-direction: column;
+}
+
+.newTodo__input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.newTodo__input input {
+padding: 8px;
+border-radius: 6px;
+border: 1px grey solid;
+width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .newTodo {
+    flex-direction: row;
+  }
+
+  .newTodo__input {
+    flex-direction: row;
+  }
+
+  .newTodo__input input {
+width: 450px;
+    }
+}

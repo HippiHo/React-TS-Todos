@@ -1,0 +1,64 @@
+.todoList {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  border: black 1px solid;
+  border-radius: 6px;
+  counter-reset: list-number;
+  list-style: none;
+  background-color: lightcyan;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.todoList__bulletPoint::before {
+  content: counter(list-number) ". ";
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.todoList__bulletPoint {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px 30px;
+  font-size: 18px;
+  padding: 8px;
+  counter-increment: list-number;
+}
+
+.todoList__bulletPoint__content, .todoList__bulletPoint__content--crossed {
+  word-break: break-word;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.todoList__bulletPoint__content {
+  font-weight: bold;
+}
+
+.todoList__bulletPoint__content--crossed {
+  text-decoration: line-through;
+}
+
+.todoList__deleteButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.todoList__deleteIcon {
+  width: 20px;
+  color: red;
+}
+
+.todoList__checkIcon {
+  width: 20px;
+  color: darkgreen;
+}
+
+.todoList__deleteIcon:hover {
+  color: purple;
+}
+
+.todoList__checkIcon:hover {
+  color: black;
+}
